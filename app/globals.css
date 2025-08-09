@@ -3,12 +3,30 @@
 @tailwind utilities;
 
 /* Light/Dark tokens */
-:root { --bg:#ffffff; --card:#ffffff; --ink:#0F172A; --muted:#475569; }
-.dark :root { --bg:#0b1220; --card:#0f172a; --ink:#e5e7eb; --muted:#94a3b8; }
-html, body { background: var(--bg); color: var(--ink); }
+:root { 
+  --bg:#ffffff; 
+  --card:#ffffff;
+  --ink:#0F172A; 
+  --muted:#475569; 
+}
+html.dark {
+  --bg: #0b1220;
+  --card: #0f172a;
+  --ink: #e5e7eb;
+  --muted: #94a3b8; /* dark */
+}
+html, body {
+   background: var(--bg);
+   color: var(--ink);
+}
 
 @layer components {
   .btn-primary { @apply rounded-lg border border-transparent bg-brand text-brand-fg px-4 py-2 font-semibold shadow-card hover:bg-brand-light; }
   .btn-secondary { @apply rounded-lg border border-slate-200 bg-white px-4 py-2 font-semibold hover:bg-slate-50 dark:border-slate-700 dark:bg-transparent dark:hover:bg-slate-800; }
   .input { @apply w-full rounded-lg border border-slate-200 bg-white px-3 py-2 dark:border-slate-700 dark:bg-transparent; }
 }
+
+@layer utilities {
+  .text-ui-muted { color: var(--muted); }
+}
+

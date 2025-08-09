@@ -5,7 +5,7 @@ const ADDRESS = process.env.NEXT_PUBLIC_ADDRESS!;
 
 export default function Footer() {
   return (
-    <footer className="border-t border-slate-200 py-7 text-sm text-muted dark:border-slate-800">
+    <footer className="border-t border-slate-200 py-7 text-sm text-ui-muted dark:border-slate-800">
       <div className="mx-auto flex w-[min(1100px,92%)] flex-wrap items-start justify-between gap-6">
         <div className="min-w-[220px]">
           <strong>HomeFix Lib</strong>

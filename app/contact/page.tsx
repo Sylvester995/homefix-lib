@@ -13,7 +13,7 @@ export default function ContactPage() {
       <Header />
       <main className="mx-auto w-[min(1100px,92%)] py-8">
         <h1 className="mb-2 text-3xl font-extrabold">Contact us</h1>
-        <p className="text-muted">We’re quick on WhatsApp—send a message or book a job.</p>
+        <p className="text-ui-muted">We’re quick on WhatsApp—send a message or book a job.</p>
         <div className="mt-5 grid gap-4 md:grid-cols-[1.1fr_.9fr]">
           <div className="rounded-[14px] border border-slate-200 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900/50">
             <div className="flex flex-wrap gap-3">

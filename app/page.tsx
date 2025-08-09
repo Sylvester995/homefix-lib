@@ -2,6 +2,7 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import BookingForm from "@/components/booking-form";
 import StickyWA from "@/components/sticky-wa";
+import Estimator from "@/components/estimator";
 
 export default function Home() {
   return (
@@ -11,18 +12,19 @@ export default function Home() {
         <section className="grid gap-6 py-10 md:grid-cols-[1.1fr_.9fr]">
           <div>
             <h1 className="text-3xl font-extrabold md:text-5xl">Book trusted home services in Monrovia</h1>
-            <p className="mt-3 text-lg text-muted">
+            <p className="mt-3 text-lg text-ui-muted">
               Cleaning • AC repair • plumbing • painting — vetted providers, fair prices, Mobile Money payments.
             </p>
             <div className="mt-4 flex flex-wrap gap-3">
               <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WA_NUMBER}?text=${encodeURIComponent("HomeFix Lib booking inquiry")}`} className="btn-primary" target="_blank">Chat on WhatsApp</a>
               <a href="#pricing" className="btn-secondary">See pricing</a>
             </div>
-            <p className="mt-2 text-sm text-muted">Workmanship guarantee 24–48h • We don’t start jobs without your approval</p>
+            <p className="mt-2 text-sm text-ui-muted">Workmanship guarantee 24–48h • We don’t start jobs without your approval</p>
           </div>
           <div className="rounded-[14px] border border-slate-200 bg-white p-5 shadow-card dark:border-slate-800 dark:bg-slate-900/50">
-            <h3 className="mb-2 font-semibold">Instant estimate</h3>
-            <p className="text-sm text-muted">Pick a service and hours/m²; confirm on chat.</p>
+            <h3 className="mb-2 font-semibold">Instant estimator</h3>
+            <Estimator />
+            <p className="text-sm text-ui-muted">Pick a service and hours/m²; confirm on chat.</p>
           </div>
         </section>
 
@@ -38,7 +40,7 @@ export default function Home() {
               <div key={title} className="rounded-[14px] border border-slate-200 bg-white p-4 shadow-card dark:border-slate-800 dark:bg-slate-900/50">
                 <span className="inline-block rounded-full border border-blue-200 bg-blue-50 px-2 py-0.5 text-xs font-semibold text-blue-900 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-200">{chip}</span>
                 <h3 className="mt-2 font-semibold">{title}</h3>
-                <div className="text-sm text-muted">{note}</div>
+                <div className="text-sm text-ui-muted">{note}</div>
               </div>
             ))}
           </div>

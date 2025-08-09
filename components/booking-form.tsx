@@ -20,6 +20,11 @@ export default function BookingForm() {
     const url = `https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
     setLoading(false);
+    
+    e.currentTarget.reset();
+    setLoading(false);
+
+     
   }
   return (
     <form onSubmit={submit} className="grid grid-cols-1 gap-3 md:grid-cols-2">
